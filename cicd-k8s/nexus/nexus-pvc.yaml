@@ -1,3 +1,5 @@
+#PV를 생성할하래HostPath를 777로 설정
+---
 kind: PersistentVolume
 apiVersion: v1
 metadata:
@@ -9,10 +11,10 @@ spec:
   capacity:
     storage: 5Gi
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: "/pvc/nexus-data"
+    path: "/pvc/nexus"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -21,7 +23,7 @@ metadata:
 spec:
   storageClassName: nexus
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 5Gi
