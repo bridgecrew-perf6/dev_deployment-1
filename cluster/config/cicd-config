@@ -7,6 +7,7 @@ clusters:
 contexts:
 - context:
     cluster: cicd-cluster
+    namespace: cattle-system
     user: cicd-user
   name: cicd-user@cicd-cluster
 current-context: cicd-user@cicd-cluster
