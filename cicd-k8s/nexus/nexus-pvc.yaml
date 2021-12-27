@@ -10,8 +10,7 @@ spec:
     storage: 5Gi
   accessModes:
     - ReadWriteMany
-  reclaimPolicy:
-    - Recycle
+  persistentVolumeReclaimPolicy: Retain
   hostPath:
     path: "/pvc/nexus-data"
 ---
