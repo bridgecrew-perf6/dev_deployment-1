@@ -21,7 +21,7 @@ spec:
         kubernetes.io/hostname: node1
       containers:
         - name: nexus
-          image: sonatype/nexus3
+          image: mksoung75/ssl-nexus:0.0.5
           resources:
             limits:
               memory: "2Gi"
